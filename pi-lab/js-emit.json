@@ -1,0 +1,1044 @@
+﻿{
+  "cases": [
+    {
+      "name": "simulate:fixed",
+      "args": {
+        "action": "simulate",
+        "policy": "fixed",
+        "a": 0.9,
+        "b": 1,
+        "k0": 0.6,
+        "mu": 0.02,
+        "eps": 0.05,
+        "seed": 4242,
+        "horizon": 120,
+        "settleTol": 0.02,
+        "disturbance": "uniform",
+        "disturbanceMagnitude": 0.1
+      },
+      "result": {
+        "action": "simulate",
+        "model": "e(t+1) = a*e(t) - b*u(t) + w(t); u(t) = clip(k(t)*e(t) + eps*sigma(t), -umax, umax); k(t+1) = clip(k + mu*e(t)*e(t+1), kmin, kmax)",
+        "options": {
+          "policy": "fixed",
+          "horizon": 120,
+          "a": 0.9,
+          "b": 1,
+          "k0": 0.6,
+          "mu": 0.02,
+          "kmin": 0,
+          "kmax": 2,
+          "umax": 10,
+          "eps": 0.05,
+          "e0": 1,
+          "seed": 4242,
+          "rhoMax": 0.98,
+          "settleTol": 0.02,
+          "disturbanceKind": "uniform",
+          "disturbanceMagnitude": 0.1,
+          "disturbancePeriod": 25,
+          "disturbanceAt": 20,
+          "gainRule": "k constant"
+        },
+        "policy": "fixed",
+        "steps": 120,
+        "finite": true,
+        "metrics": {
+          "rmse": 0.066962,
+          "mae": 0.054524,
+          "maxAbsError": 0.309341,
+          "finalAbsError": 0.005057,
+          "settleStep": 120,
+          "controlEffort": 4.522663,
+          "saturationCount": 0,
+          "explorationSteps": 0,
+          "rhoMin": 0.3,
+          "rhoMax": 0.3,
+          "stableFraction": 1,
+          "finalGain": 0.6
+        },
+        "series": [
+          {
+            "t": 6,
+            "e": -0.029446,
+            "k": 0.6,
+            "u": 0.025957
+          },
+          {
+            "t": 12,
+            "e": 0.065203,
+            "k": 0.6,
+            "u": 0.028624
+          },
+          {
+            "t": 18,
+            "e": -0.033763,
+            "k": 0.6,
+            "u": 0.052269
+          },
+          {
+            "t": 24,
+            "e": -0.087787,
+            "k": 0.6,
+            "u": -0.059713
+          },
+          {
+            "t": 30,
+            "e": 0.000064,
+            "k": 0.6,
+            "u": 0.003365
+          },
+          {
+            "t": 36,
+            "e": 0.011147,
+            "k": 0.6,
+            "u": -0.04172
+          },
+          {
+            "t": 42,
+            "e": -0.056993,
+            "k": 0.6,
+            "u": 0.045657
+          },
+          {
+            "t": 48,
+            "e": 0.036554,
+            "k": 0.6,
+            "u": 0.028168
+          },
+          {
+            "t": 54,
+            "e": -0.040417,
+            "k": 0.6,
+            "u": -0.027492
+          },
+          {
+            "t": 60,
+            "e": -0.046002,
+            "k": 0.6,
+            "u": 0.027069
+          },
+          {
+            "t": 66,
+            "e": 0.037551,
+            "k": 0.6,
+            "u": -0.035158
+          },
+          {
+            "t": 72,
+            "e": 0.048965,
+            "k": 0.6,
+            "u": -0.017493
+          },
+          {
+            "t": 78,
+            "e": 0.061658,
+            "k": 0.6,
+            "u": -0.002706
+          },
+          {
+            "t": 84,
+            "e": -0.030504,
+            "k": 0.6,
+            "u": -0.029651
+          },
+          {
+            "t": 90,
+            "e": -0.085141,
+            "k": 0.6,
+            "u": 0.011667
+          },
+          {
+            "t": 96,
+            "e": 0.051216,
+            "k": 0.6,
+            "u": 0.047514
+          },
+          {
+            "t": 102,
+            "e": 0.014681,
+            "k": 0.6,
+            "u": -0.051859
+          },
+          {
+            "t": 108,
+            "e": 0.045671,
+            "k": 0.6,
+            "u": -0.050566
+          },
+          {
+            "t": 114,
+            "e": -0.016476,
+            "k": 0.6,
+            "u": 0.072586
+          },
+          {
+            "t": 120,
+            "e": 0.005057,
+            "k": 0.6,
+            "u": 0.041425
+          }
+        ],
+        "caveat": "one run, one seed. Treat metrics as a measurement of this model only; do not claim general superiority without repeated paired runs and a statistical test."
+      }
+    },
+    {
+      "name": "simulate:adaptive",
+      "args": {
+        "action": "simulate",
+        "policy": "adaptive",
+        "a": 0.9,
+        "b": 1,
+        "k0": 0.6,
+        "mu": 0.02,
+        "eps": 0.05,
+        "seed": 4242,
+        "horizon": 120,
+        "settleTol": 0.02,
+        "disturbance": "uniform",
+        "disturbanceMagnitude": 0.1
+      },
+      "result": {
+        "action": "simulate",
+        "model": "e(t+1) = a*e(t) - b*u(t) + w(t); u(t) = clip(k(t)*e(t) + eps*sigma(t), -umax, umax); k(t+1) = clip(k + mu*e(t)*e(t+1), kmin, kmax)",
+        "options": {
+          "policy": "adaptive",
+          "horizon": 120,
+          "a": 0.9,
+          "b": 1,
+          "k0": 0.6,
+          "mu": 0.02,
+          "kmin": 0,
+          "kmax": 2,
+          "umax": 10,
+          "eps": 0.05,
+          "e0": 1,
+          "seed": 4242,
+          "rhoMax": 0.98,
+          "settleTol": 0.02,
+          "disturbanceKind": "uniform",
+          "disturbanceMagnitude": 0.1,
+          "disturbancePeriod": 25,
+          "disturbanceAt": 20,
+          "gainRule": "MIT-style gradient step, projected"
+        },
+        "policy": "adaptive",
+        "steps": 120,
+        "finite": true,
+        "metrics": {
+          "rmse": 0.066803,
+          "mae": 0.054426,
+          "maxAbsError": 0.309341,
+          "finalAbsError": 0.004292,
+          "settleStep": 120,
+          "controlEffort": 4.566357,
+          "saturationCount": 0,
+          "explorationSteps": 0,
+          "rhoMin": 0.291176,
+          "rhoMax": 0.3,
+          "stableFraction": 1,
+          "finalGain": 0.608824
+        },
+        "series": [
+          {
+            "t": 6,
+            "e": -0.029874,
+            "k": 0.606656,
+            "u": 0.025954
+          },
+          {
+            "t": 12,
+            "e": 0.064905,
+            "k": 0.606737,
+            "u": 0.028995
+          },
+          {
+            "t": 18,
+            "e": -0.0345,
+            "k": 0.607028,
+            "u": 0.052621
+          },
+          {
+            "t": 24,
+            "e": -0.086824,
+            "k": 0.607344,
+            "u": -0.059961
+          },
+          {
+            "t": 30,
+            "e": 0.000128,
+            "k": 0.607949,
+            "u": 0.003636
+          },
+          {
+            "t": 36,
+            "e": 0.011626,
+            "k": 0.607807,
+            "u": -0.042396
+          },
+          {
+            "t": 42,
+            "e": -0.057434,
+            "k": 0.607534,
+            "u": 0.046506
+          },
+          {
+            "t": 48,
+            "e": 0.036135,
+            "k": 0.607505,
+            "u": 0.028382
+          },
+          {
+            "t": 54,
+            "e": -0.040395,
+            "k": 0.607592,
+            "u": -0.028517
+          },
+          {
+            "t": 60,
+            "e": -0.046512,
+            "k": 0.607616,
+            "u": 0.027066
+          },
+          {
+            "t": 66,
+            "e": 0.037789,
+            "k": 0.607765,
+            "u": -0.036066
+          },
+          {
+            "t": 72,
+            "e": 0.04886,
+            "k": 0.607909,
+            "u": -0.018421
+          },
+          {
+            "t": 78,
+            "e": 0.061524,
+            "k": 0.608269,
+            "u": -0.003101
+          },
+          {
+            "t": 84,
+            "e": -0.030231,
+            "k": 0.608198,
+            "u": -0.030332
+          },
+          {
+            "t": 90,
+            "e": -0.085294,
+            "k": 0.608204,
+            "u": 0.01184
+          },
+          {
+            "t": 96,
+            "e": 0.050551,
+            "k": 0.608145,
+            "u": 0.048116
+          },
+          {
+            "t": 102,
+            "e": 0.01531,
+            "k": 0.608036,
+            "u": -0.052689
+          },
+          {
+            "t": 108,
+            "e": 0.046236,
+            "k": 0.608284,
+            "u": -0.051542
+          },
+          {
+            "t": 114,
+            "e": -0.017837,
+            "k": 0.608684,
+            "u": 0.072988
+          },
+          {
+            "t": 120,
+            "e": 0.004292,
+            "k": 0.608824,
+            "u": 0.041709
+          }
+        ],
+        "caveat": "one run, one seed. Treat metrics as a measurement of this model only; do not claim general superiority without repeated paired runs and a statistical test."
+      }
+    },
+    {
+      "name": "simulate:adaptive_random",
+      "args": {
+        "action": "simulate",
+        "policy": "adaptive_random",
+        "a": 0.9,
+        "b": 1,
+        "k0": 0.6,
+        "mu": 0.02,
+        "eps": 0.05,
+        "seed": 4242,
+        "horizon": 120,
+        "settleTol": 0.02,
+        "disturbance": "uniform",
+        "disturbanceMagnitude": 0.1
+      },
+      "result": {
+        "action": "simulate",
+        "model": "e(t+1) = a*e(t) - b*u(t) + w(t); u(t) = clip(k(t)*e(t) + eps*sigma(t), -umax, umax); k(t+1) = clip(k + mu*e(t)*e(t+1), kmin, kmax)",
+        "options": {
+          "policy": "adaptive_random",
+          "horizon": 120,
+          "a": 0.9,
+          "b": 1,
+          "k0": 0.6,
+          "mu": 0.02,
+          "kmin": 0,
+          "kmax": 2,
+          "umax": 10,
+          "eps": 0.05,
+          "e0": 1,
+          "seed": 4242,
+          "rhoMax": 0.98,
+          "settleTol": 0.02,
+          "disturbanceKind": "uniform",
+          "disturbanceMagnitude": 0.1,
+          "disturbancePeriod": 25,
+          "disturbanceAt": 20,
+          "gainRule": "MIT-style gradient step, projected"
+        },
+        "policy": "adaptive_random",
+        "steps": 120,
+        "finite": true,
+        "metrics": {
+          "rmse": 0.08309,
+          "mae": 0.066356,
+          "maxAbsError": 0.305722,
+          "finalAbsError": 0.075443,
+          "settleStep": null,
+          "controlEffort": 7.243971,
+          "saturationCount": 0,
+          "explorationSteps": 120,
+          "rhoMin": 0.2874,
+          "rhoMax": 0.3,
+          "stableFraction": 1,
+          "finalGain": 0.612587
+        },
+        "series": [
+          {
+            "t": 6,
+            "e": 0.086635,
+            "k": 0.607116,
+            "u": -0.079552
+          },
+          {
+            "t": 12,
+            "e": -0.141044,
+            "k": 0.607576,
+            "u": -0.0188
+          },
+          {
+            "t": 18,
+            "e": -0.009611,
+            "k": 0.608641,
+            "u": 0.06751
+          },
+          {
+            "t": 24,
+            "e": 0.081945,
+            "k": 0.60867,
+            "u": -0.030204
+          },
+          {
+            "t": 30,
+            "e": 0.013861,
+            "k": 0.608691,
+            "u": -0.001111
+          },
+          {
+            "t": 36,
+            "e": 0.054413,
+            "k": 0.609374,
+            "u": 0.147923
+          },
+          {
+            "t": 42,
+            "e": -0.042595,
+            "k": 0.609779,
+            "u": 0.0985
+          },
+          {
+            "t": 48,
+            "e": 0.077357,
+            "k": 0.609578,
+            "u": -0.050215
+          },
+          {
+            "t": 54,
+            "e": 0.047277,
+            "k": 0.609772,
+            "u": 0.105305
+          },
+          {
+            "t": 60,
+            "e": 0.037888,
+            "k": 0.609964,
+            "u": -0.042548
+          },
+          {
+            "t": 66,
+            "e": -0.123047,
+            "k": 0.609523,
+            "u": 0.039966
+          },
+          {
+            "t": 72,
+            "e": -0.11384,
+            "k": 0.610191,
+            "u": 0.06497
+          },
+          {
+            "t": 78,
+            "e": -0.068859,
+            "k": 0.611347,
+            "u": 0.031179
+          },
+          {
+            "t": 84,
+            "e": 0.010778,
+            "k": 0.611521,
+            "u": 0.093807
+          },
+          {
+            "t": 90,
+            "e": -0.028373,
+            "k": 0.611588,
+            "u": -0.084174
+          },
+          {
+            "t": 96,
+            "e": 0.021956,
+            "k": 0.611643,
+            "u": -0.057128
+          },
+          {
+            "t": 102,
+            "e": 0.090859,
+            "k": 0.611815,
+            "u": -0.024822
+          },
+          {
+            "t": 108,
+            "e": 0.138437,
+            "k": 0.611792,
+            "u": 0.006321
+          },
+          {
+            "t": 114,
+            "e": -0.023845,
+            "k": 0.612242,
+            "u": -0.015079
+          },
+          {
+            "t": 120,
+            "e": -0.075443,
+            "k": 0.612587,
+            "u": 0.06533
+          }
+        ],
+        "caveat": "one run, one seed. Treat metrics as a measurement of this model only; do not claim general superiority without repeated paired runs and a statistical test."
+      }
+    },
+    {
+      "name": "simulate:adaptive_pi",
+      "args": {
+        "action": "simulate",
+        "policy": "adaptive_pi",
+        "a": 0.9,
+        "b": 1,
+        "k0": 0.6,
+        "mu": 0.02,
+        "eps": 0.05,
+        "seed": 4242,
+        "horizon": 120,
+        "settleTol": 0.02,
+        "disturbance": "uniform",
+        "disturbanceMagnitude": 0.1
+      },
+      "result": {
+        "action": "simulate",
+        "model": "e(t+1) = a*e(t) - b*u(t) + w(t); u(t) = clip(k(t)*e(t) + eps*sigma(t), -umax, umax); k(t+1) = clip(k + mu*e(t)*e(t+1), kmin, kmax)",
+        "options": {
+          "policy": "adaptive_pi",
+          "horizon": 120,
+          "a": 0.9,
+          "b": 1,
+          "k0": 0.6,
+          "mu": 0.02,
+          "kmin": 0,
+          "kmax": 2,
+          "umax": 10,
+          "eps": 0.05,
+          "e0": 1,
+          "seed": 4242,
+          "rhoMax": 0.98,
+          "settleTol": 0.02,
+          "disturbanceKind": "uniform",
+          "disturbanceMagnitude": 0.1,
+          "disturbancePeriod": 25,
+          "disturbanceAt": 20,
+          "gainRule": "MIT-style gradient step, projected"
+        },
+        "policy": "adaptive_pi",
+        "steps": 120,
+        "finite": true,
+        "metrics": {
+          "rmse": 0.087649,
+          "mae": 0.069639,
+          "maxAbsError": 0.259341,
+          "finalAbsError": 0.07327,
+          "settleStep": null,
+          "controlEffort": 6.49225,
+          "saturationCount": 0,
+          "explorationSteps": 120,
+          "rhoMin": 0.287768,
+          "rhoMax": 0.3,
+          "stableFraction": 1,
+          "finalGain": 0.612232
+        },
+        "series": [
+          {
+            "t": 6,
+            "e": 0.037529,
+            "k": 0.605244,
+            "u": 0.011505
+          },
+          {
+            "t": 12,
+            "e": 0.123853,
+            "k": 0.605474,
+            "u": -0.002796
+          },
+          {
+            "t": 18,
+            "e": -0.00417,
+            "k": 0.606219,
+            "u": -0.038182
+          },
+          {
+            "t": 24,
+            "e": -0.154143,
+            "k": 0.60658,
+            "u": -0.045533
+          },
+          {
+            "t": 30,
+            "e": -0.058542,
+            "k": 0.607313,
+            "u": 0.035635
+          },
+          {
+            "t": 36,
+            "e": -0.018009,
+            "k": 0.607281,
+            "u": 0.049966
+          },
+          {
+            "t": 42,
+            "e": 0.012292,
+            "k": 0.607064,
+            "u": 0.037275
+          },
+          {
+            "t": 48,
+            "e": 0.10339,
+            "k": 0.60722,
+            "u": 0.014129
+          },
+          {
+            "t": 54,
+            "e": 0.018487,
+            "k": 0.607581,
+            "u": -0.060061
+          },
+          {
+            "t": 60,
+            "e": -0.116147,
+            "k": 0.607673,
+            "u": 0.036258
+          },
+          {
+            "t": 66,
+            "e": -0.029375,
+            "k": 0.608202,
+            "u": -0.02192
+          },
+          {
+            "t": 72,
+            "e": -0.010028,
+            "k": 0.608641,
+            "u": 0.012943
+          },
+          {
+            "t": 78,
+            "e": 0.031039,
+            "k": 0.608963,
+            "u": 0.087723
+          },
+          {
+            "t": 84,
+            "e": 0.03686,
+            "k": 0.609303,
+            "u": -0.04468
+          },
+          {
+            "t": 90,
+            "e": -0.026661,
+            "k": 0.60959,
+            "u": -0.019955
+          },
+          {
+            "t": 96,
+            "e": 0.080254,
+            "k": 0.609599,
+            "u": -0.044134
+          },
+          {
+            "t": 102,
+            "e": -0.054063,
+            "k": 0.609533,
+            "u": -0.043745
+          },
+          {
+            "t": 108,
+            "e": -0.020674,
+            "k": 0.610308,
+            "u": -0.0377
+          },
+          {
+            "t": 114,
+            "e": -0.048271,
+            "k": 0.611593,
+            "u": 0.165568
+          },
+          {
+            "t": 120,
+            "e": 0.07327,
+            "k": 0.612232,
+            "u": 0.032815
+          }
+        ],
+        "caveat": "one run, one seed. Treat metrics as a measurement of this model only; do not claim general superiority without repeated paired runs and a statistical test."
+      }
+    },
+    {
+      "name": "step:stable",
+      "args": {
+        "action": "step",
+        "e": 1,
+        "a": 0.9,
+        "b": 1,
+        "k": 0.6,
+        "eps": 0.02,
+        "sigma": 1,
+        "w": 0.05
+      },
+      "result": {
+        "action": "step",
+        "inputs": {
+          "e": 1,
+          "a": 0.9,
+          "b": 1,
+          "k": 0.6,
+          "eps": 0.02,
+          "sigma": 1,
+          "w": 0.05
+        },
+        "outputs": {
+          "u": 0.62,
+          "eNext": 0.33
+        },
+        "closedLoop": {
+          "rho": 0.3,
+          "stable": true
+        },
+        "caveat": "stability of this first-order model says nothing about agent workflows that lack a measurable state"
+      }
+    },
+    {
+      "name": "signal:0-40",
+      "args": {
+        "action": "signal",
+        "n": 0,
+        "count": 40
+      },
+      "result": {
+        "action": "signal",
+        "formula": "r(n) = frac(n*pi); sigma(n) = +1 if r(n) < 1/2 else -1",
+        "arithmetic": "exact integer arithmetic with 100 decimal digits of pi; exact for n <= 1e40",
+        "nature": "deterministic sequence — not a random number generator, and not claimed to beat random exploration",
+        "points": [
+          {
+            "n": 0,
+            "r": "0.00000000000000000000",
+            "sigma": 1
+          },
+          {
+            "n": 1,
+            "r": "0.14159265358979323846",
+            "sigma": 1
+          },
+          {
+            "n": 2,
+            "r": "0.28318530717958647692",
+            "sigma": 1
+          },
+          {
+            "n": 3,
+            "r": "0.42477796076937971538",
+            "sigma": 1
+          },
+          {
+            "n": 4,
+            "r": "0.56637061435917295385",
+            "sigma": -1
+          },
+          {
+            "n": 5,
+            "r": "0.70796326794896619231",
+            "sigma": -1
+          },
+          {
+            "n": 6,
+            "r": "0.84955592153875943077",
+            "sigma": -1
+          },
+          {
+            "n": 7,
+            "r": "0.99114857512855266923",
+            "sigma": -1
+          },
+          {
+            "n": 8,
+            "r": "0.13274122871834590770",
+            "sigma": 1
+          },
+          {
+            "n": 9,
+            "r": "0.27433388230813914616",
+            "sigma": 1
+          },
+          {
+            "n": 10,
+            "r": "0.41592653589793238462",
+            "sigma": 1
+          },
+          {
+            "n": 11,
+            "r": "0.55751918948772562308",
+            "sigma": -1
+          },
+          {
+            "n": 12,
+            "r": "0.69911184307751886155",
+            "sigma": -1
+          },
+          {
+            "n": 13,
+            "r": "0.84070449666731210001",
+            "sigma": -1
+          },
+          {
+            "n": 14,
+            "r": "0.98229715025710533847",
+            "sigma": -1
+          },
+          {
+            "n": 15,
+            "r": "0.12388980384689857693",
+            "sigma": 1
+          },
+          {
+            "n": 16,
+            "r": "0.26548245743669181540",
+            "sigma": 1
+          },
+          {
+            "n": 17,
+            "r": "0.40707511102648505386",
+            "sigma": 1
+          },
+          {
+            "n": 18,
+            "r": "0.54866776461627829232",
+            "sigma": -1
+          },
+          {
+            "n": 19,
+            "r": "0.69026041820607153079",
+            "sigma": -1
+          },
+          {
+            "n": 20,
+            "r": "0.83185307179586476925",
+            "sigma": -1
+          },
+          {
+            "n": 21,
+            "r": "0.97344572538565800771",
+            "sigma": -1
+          },
+          {
+            "n": 22,
+            "r": "0.11503837897545124617",
+            "sigma": 1
+          },
+          {
+            "n": 23,
+            "r": "0.25663103256524448464",
+            "sigma": 1
+          },
+          {
+            "n": 24,
+            "r": "0.39822368615503772310",
+            "sigma": 1
+          },
+          {
+            "n": 25,
+            "r": "0.53981633974483096156",
+            "sigma": -1
+          },
+          {
+            "n": 26,
+            "r": "0.68140899333462420002",
+            "sigma": -1
+          },
+          {
+            "n": 27,
+            "r": "0.82300164692441743849",
+            "sigma": -1
+          },
+          {
+            "n": 28,
+            "r": "0.96459430051421067695",
+            "sigma": -1
+          },
+          {
+            "n": 29,
+            "r": "0.10618695410400391541",
+            "sigma": 1
+          },
+          {
+            "n": 30,
+            "r": "0.24777960769379715387",
+            "sigma": 1
+          },
+          {
+            "n": 31,
+            "r": "0.38937226128359039234",
+            "sigma": 1
+          },
+          {
+            "n": 32,
+            "r": "0.53096491487338363080",
+            "sigma": -1
+          },
+          {
+            "n": 33,
+            "r": "0.67255756846317686926",
+            "sigma": -1
+          },
+          {
+            "n": 34,
+            "r": "0.81415022205297010772",
+            "sigma": -1
+          },
+          {
+            "n": 35,
+            "r": "0.95574287564276334619",
+            "sigma": -1
+          },
+          {
+            "n": 36,
+            "r": "0.09733552923255658465",
+            "sigma": 1
+          },
+          {
+            "n": 37,
+            "r": "0.23892818282234982311",
+            "sigma": 1
+          },
+          {
+            "n": 38,
+            "r": "0.38052083641214306158",
+            "sigma": 1
+          },
+          {
+            "n": 39,
+            "r": "0.52211349000193630004",
+            "sigma": -1
+          }
+        ],
+        "balance": {
+          "plus": 19,
+          "minus": 21,
+          "maxSignRun": 4
+        }
+      }
+    },
+    {
+      "name": "gain",
+      "args": {
+        "action": "gain_scan",
+        "a": 0.9,
+        "b": 1,
+        "rhoTarget": 0.9,
+        "kmin": 0,
+        "kmax": 2
+      },
+      "result": {
+        "action": "gain_scan",
+        "condition": "|a - b*k| <= rho",
+        "feasibleInterval": {
+          "kMin": 0,
+          "kMax": 1.8
+        },
+        "samples": [
+          {
+            "k": 0,
+            "rho": 0.9
+          },
+          {
+            "k": 0.25,
+            "rho": 0.65
+          },
+          {
+            "k": 0.5,
+            "rho": 0.4
+          },
+          {
+            "k": 0.75,
+            "rho": 0.15
+          },
+          {
+            "k": 1,
+            "rho": 0.1
+          },
+          {
+            "k": 1.25,
+            "rho": 0.35
+          },
+          {
+            "k": 1.5,
+            "rho": 0.6
+          },
+          {
+            "k": 1.75,
+            "rho": 0.85
+          },
+          {
+            "k": 2,
+            "rho": 1.1
+          }
+        ]
+      }
+    }
+  ]
+}

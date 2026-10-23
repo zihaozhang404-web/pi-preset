@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "π Agent Preset",
+    "description": "Adds the π (Pi Adaptive Controller) agent preset: a deterministic π-signal control tool, a measured stability guard, and a two-layer observe-plan-act-verify loop with hard budgets."
+  }
+}

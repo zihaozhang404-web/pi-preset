@@ -1,0 +1,212 @@
+{
+  "none|A-fixed": {
+    "n": 300,
+    "rmseMean": 0.02223747949983304,
+    "rmseMedian": 0.02223747949983304,
+    "rmseSd": 0.0,
+    "rmseCiLow": 0.02223747949983304,
+    "rmseCiHigh": 0.02223747949983304,
+    "settleMedian": 4.0,
+    "settledWithinHorizon": 1.0,
+    "effortMean": 0.8571428571428574,
+    "saturationMean": 0.0,
+    "stableFractionMean": 1.0
+  },
+  "none|B-adaptive": {
+    "n": 300,
+    "rmseMean": 0.022193731889502945,
+    "rmseMedian": 0.022193731889502948,
+    "rmseSd": 3.475243859842279e-18,
+    "rmseCiLow": 0.022193731889502945,
+    "rmseCiHigh": 0.022193731889502945,
+    "settleMedian": 4.0,
+    "settledWithinHorizon": 1.0,
+    "effortMean": 0.8575166823982314,
+    "saturationMean": 0.0,
+    "stableFractionMean": 1.0
+  },
+  "none|C-random": {
+    "n": 300,
+    "rmseMean": 0.05681919748972066,
+    "rmseMedian": 0.05680490046570949,
+    "rmseSd": 0.001695272774020293,
+    "rmseCiLow": 0.05662299094860399,
+    "rmseCiHigh": 0.05701319703366285,
+    "settleMedian": 201.0,
+    "settledWithinHorizon": 0.0,
+    "effortMean": 10.667397382609295,
+    "saturationMean": 0.0,
+    "stableFractionMean": 1.0
+  },
+  "none|D-pi": {
+    "n": 300,
+    "rmseMean": 0.059267647721990994,
+    "rmseMedian": 0.059267647721991,
+    "rmseSd": 6.950487719684559e-18,
+    "rmseCiLow": 0.059267647721990994,
+    "rmseCiHigh": 0.059267647721990994,
+    "settleMedian": 201.0,
+    "settledWithinHorizon": 0.0,
+    "effortMean": 8.863452630702296,
+    "saturationMean": 0.0,
+    "stableFractionMean": 1.0
+  },
+  "none|delta|A-fixed": {
+    "delta": 0.037030168222157954,
+    "low": 0.037030168222157954,
+    "high": 0.037030168222157954,
+    "verdict": "确定差异（零方差，非抽样统计）"
+  },
+  "none|delta|B-adaptive": {
+    "delta": 0.03707391583248805,
+    "low": 0.03707391583248805,
+    "high": 0.03707391583248805,
+    "verdict": "确定差异（零方差，非抽样统计）"
+  },
+  "none|delta|C-random": {
+    "delta": 0.0024484502322703328,
+    "low": 0.0022641514310013547,
+    "high": 0.0026427506573735633,
+    "verdict": "D 显著更差"
+  },
+  "uniform|A-fixed": {
+    "n": 300,
+    "rmseMean": 0.06430204322603432,
+    "rmseMedian": 0.06417480526650095,
+    "rmseSd": 0.0026155745292338,
+    "rmseCiLow": 0.06400095124354743,
+    "rmseCiHigh": 0.06460056832645368,
+    "settleMedian": 201.0,
+    "settledWithinHorizon": 0.21333333333333335,
+    "effortMean": 6.936287215249637,
+    "saturationMean": 0.0,
+    "stableFractionMean": 1.0
+  },
+  "uniform|B-adaptive": {
+    "n": 300,
+    "rmseMean": 0.06412759061449162,
+    "rmseMedian": 0.0640364228638946,
+    "rmseSd": 0.002568916370002881,
+    "rmseCiLow": 0.0638335625047337,
+    "rmseCiHigh": 0.06440966317003613,
+    "settleMedian": 201.0,
+    "settledWithinHorizon": 0.21333333333333335,
+    "effortMean": 7.013427455460204,
+    "saturationMean": 0.0,
+    "stableFractionMean": 1.0
+  },
+  "uniform|C-random": {
+    "n": 300,
+    "rmseMean": 0.08282220339012501,
+    "rmseMedian": 0.08314359475869929,
+    "rmseSd": 0.0038018827832635963,
+    "rmseCiLow": 0.08239259199699815,
+    "rmseCiHigh": 0.08325294606814698,
+    "settleMedian": 201.0,
+    "settledWithinHorizon": 0.21,
+    "effortMean": 12.228723774987051,
+    "saturationMean": 0.0,
+    "stableFractionMean": 1.0
+  },
+  "uniform|D-pi": {
+    "n": 300,
+    "rmseMean": 0.08450518838107043,
+    "rmseMedian": 0.08452502214290306,
+    "rmseSd": 0.003784045441689529,
+    "rmseCiLow": 0.08406535570704292,
+    "rmseCiHigh": 0.08495145189007355,
+    "settleMedian": 201.0,
+    "settledWithinHorizon": 0.15666666666666668,
+    "effortMean": 11.03482627334195,
+    "saturationMean": 0.0,
+    "stableFractionMean": 1.0
+  },
+  "uniform|delta|A-fixed": {
+    "delta": 0.020203145155036115,
+    "low": 0.019665081048769552,
+    "high": 0.02072250907919234,
+    "verdict": "D 显著更差"
+  },
+  "uniform|delta|B-adaptive": {
+    "delta": 0.02037759776657881,
+    "low": 0.01987941340827902,
+    "high": 0.020883547205707384,
+    "verdict": "D 显著更差"
+  },
+  "uniform|delta|C-random": {
+    "delta": 0.0016829849909454214,
+    "low": 0.0010618450727030702,
+    "high": 0.0023021174156559153,
+    "verdict": "D 显著更差"
+  },
+  "sine|A-fixed": {
+    "n": 300,
+    "rmseMean": 0.10239119799554029,
+    "rmseMedian": 0.10239119799554026,
+    "rmseSd": 2.7801950878738235e-17,
+    "rmseCiLow": 0.10239119799554029,
+    "rmseCiHigh": 0.10239119799554029,
+    "settleMedian": 200.0,
+    "settledWithinHorizon": 1.0,
+    "effortMean": 11.559170028815833,
+    "saturationMean": 0.0,
+    "stableFractionMean": 1.0
+  },
+  "sine|B-adaptive": {
+    "n": 300,
+    "rmseMean": 0.09925077588718399,
+    "rmseMedian": 0.09925077588718398,
+    "rmseSd": 1.3900975439369117e-17,
+    "rmseCiLow": 0.09925077588718399,
+    "rmseCiHigh": 0.09925077588718399,
+    "settleMedian": 200.0,
+    "settledWithinHorizon": 1.0,
+    "effortMean": 11.658400528802265,
+    "saturationMean": 0.0,
+    "stableFractionMean": 1.0
+  },
+  "sine|C-random": {
+    "n": 300,
+    "rmseMean": 0.11160338943005281,
+    "rmseMedian": 0.11163902777529763,
+    "rmseSd": 0.004082782440945984,
+    "rmseCiLow": 0.11111775010325826,
+    "rmseCiHigh": 0.1120493330299384,
+    "settleMedian": 201.0,
+    "settledWithinHorizon": 0.0,
+    "effortMean": 14.596765563094669,
+    "saturationMean": 0.0,
+    "stableFractionMean": 1.0
+  },
+  "sine|D-pi": {
+    "n": 300,
+    "rmseMean": 0.11288355754984938,
+    "rmseMedian": 0.1128835575498494,
+    "rmseSd": 1.3900975439369117e-17,
+    "rmseCiLow": 0.11288355754984938,
+    "rmseCiHigh": 0.11288355754984938,
+    "settleMedian": 201.0,
+    "settledWithinHorizon": 0.0,
+    "effortMean": 13.929791642939065,
+    "saturationMean": 0.0,
+    "stableFractionMean": 1.0
+  },
+  "sine|delta|A-fixed": {
+    "delta": 0.010492359554309091,
+    "low": 0.010492359554309091,
+    "high": 0.010492359554309091,
+    "verdict": "确定差异（零方差，非抽样统计）"
+  },
+  "sine|delta|B-adaptive": {
+    "delta": 0.013632781662665391,
+    "low": 0.013632781662665391,
+    "high": 0.013632781662665391,
+    "verdict": "确定差异（零方差，非抽样统计）"
+  },
+  "sine|delta|C-random": {
+    "delta": 0.0012801681197965736,
+    "low": 0.0008362179736439608,
+    "high": 0.0017394772790097943,
+    "verdict": "D 显著更差"
+  }
+}
